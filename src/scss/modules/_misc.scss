@@ -1,0 +1,17 @@
+$select-bg: transparentize(#D7B2FF, 0.2);
+
+::selection{
+  background: $select-bg;
+  color: #140C1B;
+  text-shadow: none;
+}
+::-moz-selection{
+  background: $select-bg;
+  color: #140C1B;
+  text-shadow: none;
+}
+::-webkit-selection{
+  background: $select-bg;
+  color: #140C1B;
+  text-shadow: none;
+}

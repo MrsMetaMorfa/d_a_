@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="si">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{% block title %}{% endblock %}</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="assets/js/splide.min.css">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+
+  {% block headAfter %}
+  {% endblock %}
+</head>
+{# The whole body block can be overriden if needed #}
+{% block body %}
+  <body>
+<div class="wrapper">
+  {% include "partials/header.njk" %}
+
+  <main class="main" role="main">
+    {% block main %}
+    {% endblock %}
+  </main>
+
+  <footer class="footer section" role="contentinfo">
+    <div class="footer__columns container">
+      <div class="footer__column">
+        <div class="footer__logo">
+          <img src="assets/img/logo.svg" alt="DEXART">
+        </div>
+        <p class="footer__copyright">Dexart (c) 2022</p>
+        <ul class="footer__follow container">
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_inst.svg" alt="Instagram logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_twitter.svg" alt="Twitter logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_youtube.svg" alt="Youtube logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_telegram.svg" alt="Telegram logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_medium.svg" alt="Medium logo">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn" target="_blank">
+              <img src="assets/img/icon_reddit.svg" alt="Reddit logo">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h2 class="footer__title">Info</h2>
+        <ul class="footer__list">
+          <li>
+            <a href="#" class="btn footer__link">WhitePaper</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Cookies Policy</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Term of service</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Legal information</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Disclaimer</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h2 class="footer__title">Sitemap</h2>
+        <ul class="footer__list">
+          <li>
+            <a href="#" class="btn footer__link">Main</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Avatar design tool</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Avatar design tool</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">World backstory</a>
+          </li>
+          <li>
+            <a href="#" class="btn footer__link">Token</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h2 class="footer__title">Follow DEXART</h2>
+        <p class="footer__subtitle">Subscribe to the newsletter of the most important news</p>
+        <form action="#" class="footer__form">
+          <div class="form__line">
+            <label class="form__input">
+              <span class="visually-hidden">Email</span>
+              <input type="email" name="email" placeholder="Email">
+            </label>
+            <button class="btn form__button" type="submit" onclick="event.preventDefault(); this.classList.add('loaded')">
+              <span>Sign Up</span>
+              <img src="assets/img/load.svg" alt="Form loading">
+            </button>
+          </div>
+        </form>
+        <p class="footer__designer">Designed by <a href="https://t.me/julistarr" class="btn btn-link">JULI DESIGN</a></p>
+      </div>
+    </div>
+  </footer>
+</div>
+  {% include "partials/scripts.njk" %}
+
+  {% block end %}
+  {% endblock %}
+
+  </body>
+{% endblock %}
+</html>
